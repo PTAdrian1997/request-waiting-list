@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
 
+export enum Usertypes {
+  none = 0,
+  simple = 1,
+  moderator = 2,
+  superuser = 3
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserinfoService {
 
   username = 'none';
-  usertype = 'moderator';
+  usertype = Usertypes.none;
 
   constructor() {
 
@@ -20,7 +27,7 @@ export class UserinfoService {
     return this.username;
   }
 
-  getUsertype(): string {
+  getUsertype(): Usertypes {
     return this.usertype;
   }
 
