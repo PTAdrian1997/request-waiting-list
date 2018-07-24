@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { REQUESTS } from '../mock-requests';
 import { RequestService } from '../request.service';
 import { Request } from '../request';
-import { UserinfoService, Usertypes } from '../userinfo.service';
+import { UserinfoService } from '../userinfo.service';
 
 @Component({
   selector: 'app-requests',
@@ -14,7 +14,7 @@ export class RequestsComponent implements OnInit {
   selectedRequest: Request;
   requests: Request[];
   username : string;
-  usertype: Usertypes;
+  usertype: number;
 
   constructor(
               private requestService: RequestService,
@@ -34,15 +34,11 @@ export class RequestsComponent implements OnInit {
   }
 
   accept(request: Request): void {
-    if(this.usertype === Usertypes.none){
       this.requests = this.requests.filter(r => r !== request);
-    }
   }
 
   deny(request: Request): void {
-    if(this.usertype === Usertypes.none){
       this.requests = this.requests.filter(r => r !== request);
-    }
   }
 
   getUser(): void {
