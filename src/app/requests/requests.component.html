@@ -1,0 +1,13 @@
+<h2>Requests</h2>
+<ul class="requests">
+  <li *ngFor="let request of requests">
+    <span class="badge">{{request.hash}}</span> <span> {{request.documentName}}</span>  {{request.proposerName}}
+	<button class="accept" title="accept request" (click)="accept(request)">Accept</button>
+  <button class="deny" title="delete request" (click)="deny(request)">Deny</button>
+  </li>
+</ul>
+<div class = "login info">
+<h3>User info</h3>
+<div *ngIf="userInfoService.username!='none'; else noneUsernameBlock">username: <span>{{userInfoService.username}}</span> </div>
+<ng-template #noneUsernameBlock>Log in</ng-template>
+</div>
