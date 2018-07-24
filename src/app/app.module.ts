@@ -6,12 +6,16 @@ import { RequestsComponent } from './requests/requests.component';
 
 import {FormsModule} from '@angular/forms';
 import { RequestDetailComponent } from './request-detail/request-detail.component';
+import { AddSubjectComponent } from './add-subject/add-subject.component';
+import { AddUniversityComponent } from './add-university/add-university.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RequestsComponent,
-    RequestDetailComponent
+    RequestDetailComponent,
+    AddSubjectComponent,
+    AddUniversityComponent
   ],
   imports: [
 	FormsModule,
