@@ -38,15 +38,19 @@ button:hover {
 
 button.accept {
   position: absolute;
-  left: 300px;
+  left: 750px;
   top: 10px;
   background-color: green !important;
   color: yellow;
 }
 button.deny {
   position: absolute;
-  left: 390px;
+  left: 850px;
   top: 10px;
   background-color: green !important;
   color: red;
+}
+.login_info {
+  position: absolute;
+
 }

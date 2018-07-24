@@ -6,8 +6,10 @@
   <button class="deny" title="delete request" (click)="deny(request)">Deny</button>
   </li>
 </ul>
-<div class = "login info">
+<div class = "login_info">
 <h3>User info</h3>
 <div *ngIf="userInfoService.username!='none'; else noneUsernameBlock">username: <span>{{userInfoService.username}}</span> </div>
 <ng-template #noneUsernameBlock>Log in</ng-template>
+</div>
+<div *ngIf = "userInfoService.usertype!='moderator'" class = "upload_doc">
 </div>
