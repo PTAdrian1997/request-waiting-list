@@ -4,5 +4,6 @@ export class Request{
 	authorName: string;
 	documentName: string;
 	proposerName: string;
+	articleDescription: string;
 	contentLink: string;
 }
