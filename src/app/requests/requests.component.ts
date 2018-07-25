@@ -46,4 +46,8 @@ export class RequestsComponent implements OnInit {
     this.usertype = this.userInfoService.getUsertype();
   }
 
+  onSelect(request: Request): void {
+    this.selectedRequest = request;
+  }
+
 }
