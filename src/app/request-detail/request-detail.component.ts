@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+/*will present the content of a selected File/Document;*/
+import { Request } from '../request';
 
 @Component({
   selector: 'app-request-detail',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./request-detail.component.css']
 })
 export class RequestDetailComponent implements OnInit {
+
+  @Input() request: Request;
 
   constructor() { }
 
